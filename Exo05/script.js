@@ -5,5 +5,5 @@ document.querySelector(".tab").innerHTML += str.split("").join(",");
 document.querySelector(".upper").innerHTML += str
   .toLowerCase()
   .split(" ")
-  .map((word) => word.charAt(0).toUpperCase() + word.split(1))
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
   .join(" ");
