@@ -8,7 +8,7 @@ voyelle.forEach((element) => {
     affichage = `<p>La lettre ${letter} est une voyelle</p>`;
   }
 });
-if ((i = 1)) {
+if (i == 1) {
   document.body.innerHTML = affichage;
 } else {
   document.body.innerHTML = `<p>La lettre ${letter} est une consonne</p>`;
