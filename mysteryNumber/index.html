@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Le nombre mystère</h1>
+      <p>
+        J'ai généré un nombre entre 1 et 50 <br />Essayé de le deviner en
+        proposant ci-dessous
+      </p>
+      <p id="result"></p>
+      <label for="try"></label>
+      <input type="text" id="try" />
+      <button onclick="attempt()" id="enter">Valider</button>
+      <br />
+      <button onclick="replay()">Rejouer</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
