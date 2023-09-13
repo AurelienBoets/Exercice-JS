@@ -24,12 +24,15 @@ const attempt = () => {
       game = true;
     }
   }
+  document.querySelector("input").value = "";
 };
 
 const replay = () => {
   rand = Math.floor(Math.random() * 50) + 1;
   numberTry = 0;
   updateResult();
+  game = false;
+  console.log(rand);
   document.querySelector("#result").innerHTML = "";
 };
 
