@@ -4,15 +4,15 @@ class Voiture {
     this.modele = modele;
     this.vitesse = vitesse;
   }
-  tourner = (x) => {
+  tourner(x) {
     this.vitesse -= 5 * x;
-  };
-  accelerer = (x) => {
+  }
+  accelerer(x) {
     this.vitesse += 10 * x;
-  };
-  getVitesse = () => {
+  }
+  getVitesse() {
     console.log(this.vitesse);
-  };
+  }
 }
 voiture1 = new Voiture("Bmw", "Série 1", 80);
 voiture2 = new Voiture("Mercedes", "GLB", 100);
