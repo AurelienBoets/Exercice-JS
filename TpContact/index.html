@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>Titre</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Date Naissance</th>
+        <th>Téléphone</th>
+        <th>Email</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="form">
+      <h3>Ajouter Contact</h3>
+      <input type="radio" name="titre" id="mr" value="Mr" />
+      <label for="mr">Mr</label>
+      <input type="radio" name="titre" id="mme" value="Mme" />
+      <label for="mme">Mme</label><br />
+      <input type="text" name="nom" id="nom" placeholder="nom" />
+      <input type="text" name="prenom" id="prenom" placeholder="prenom" /><br />
+      <input type="date" name="date" id="date" />
+      <input type="tel" name="phone" id="phone" placeholder="telephone" />
+      <input type="email" name="email" id="email" placeholder="email" /><br />
+      <button onclick="add()">Ajouter</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
