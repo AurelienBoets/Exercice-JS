@@ -6,10 +6,21 @@ export class VehicleList {
   }
 
   addVehicle(immatricule) {
-    const vehicle = new Vehicle(immatricule);
-    this.listVehicle.push(vehicle);
-    const msg = `Veuillez prendre un ticket pour le véhicule ${immatricule}`;
-    return this.render("bg-green", msg);
+    let msg = "";
+    let color;
+    this.listVehicle.forEach((element) => {
+      if (element.immatricule == immatricule) {
+        msg = `Le véhicule ${immatricule} existe déjà`;
+        color = "bg-red";
+      }
+    });
+    if (msg == "") {
+      const vehicle = new Vehicle(immatricule);
+      this.listVehicle.push(vehicle);
+      msg = `Veuillez prendre un ticket pour le véhicule ${immatricule}`;
+      color = "bg-green";
+    }
+    return this.render(color, msg);
   }
 
   addVehicleTest(immatricule, date) {
