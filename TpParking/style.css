@@ -1,0 +1,67 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+button {
+  border-radius: 5px;
+  border: none;
+  color: rgb(240, 240, 240);
+}
+#buy {
+  width: 5%;
+  height: 25px;
+  background-color: #198754;
+}
+input {
+  height: 25px;
+  width: 45%;
+  border-radius: 5px;
+  border: 1px solid rgb(22, 22, 22);
+  padding: 5px;
+}
+#ticket {
+  width: 50%;
+  height: 25px;
+  background-color: rgb(97, 97, 255);
+}
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.disable {
+  display: none;
+}
+.alert {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(22, 22, 22);
+  width: 50%;
+}
+.container-alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-green {
+  background-color: #198754;
+}
+.bg-yellow {
+  background-color: #ffc107;
+}
+.bg-red {
+  background-color: #dc3545;
+}
