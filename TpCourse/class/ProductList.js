@@ -3,10 +3,10 @@ import { Product } from "./Product.js";
 export class ProductList {
   constructor() {
     this.productList = this.initTab();
-    this.i = this.initId();
+    this.id = this.initId();
   }
   addProduct(name) {
-    let product = new Product(++this.i, name);
+    let product = new Product(++this.id, name);
     this.productList.push(product);
     localStorage.setItem("product", JSON.stringify(this.productList));
     return this.render();
@@ -51,7 +51,19 @@ export class ProductList {
     return x;
   }
   delete(id) {
-    this.productList.filter((element) => element.id != id);
+    const tab = [];
+    this.productList.forEach((element) => {
+      if (element.id != id) {
+        tab.push(element);
+      }
+    });
+    this.productList = tab;
+    if (tab.length == 0) {
+      localStorage.removeItem("product");
+    } else {
+      localStorage.setItem("product", JSON.stringify(this.productList));
+    }
+    return this.render();
   }
   reset() {
     this.productList = [];

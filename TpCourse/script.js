@@ -23,6 +23,9 @@ btnReset.addEventListener("click", () => {
 });
 
 list.addEventListener("click", (e) => {
-  let a = e.target.offsetParent;
-  if (a.getAttribute("data-id"));
+  let listItem = e.target.offsetParent;
+  if (e.target.getAttribute("class") == "bi bi-trash float-end") {
+    list.innerHTML = "";
+    list.appendChild(productList.delete(listItem.getAttribute("data-id")));
+  }
 });
