@@ -2,8 +2,13 @@ import { Poke } from "./Pokemon.js";
 
 export class Display {
   static display(setImg, setName, setHeight, setWeight, id) {
-    document.body.innerHTML = "";
-    let div = document.createElement("div");
+    let div;
+    if (!document.getElementById("pokeDisplay")) {
+      div = document.createElement("div");
+      div.id = "pokeDisplay";
+    } else {
+      div = document.getElementById("pokeDisplay");
+    }
     div.innerHTML = `<div class="d-flex justify-content-center align-items-center flex-column"><img class="d-block" src="${setImg}">
     <span class="text-center d-block">Name: ${setName}</span>
     <span class="text-center d-block">Height: ${setHeight}</span>
