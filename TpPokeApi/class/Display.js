@@ -6,9 +6,9 @@ export class Display {
     document.body.innerHTML = "";
     let div = document.createElement("div");
     div.innerHTML = `<div class="d-flex justify-content-center align-items-center flex-column"><img class="d-block" src="${setImg}">
-    <span class="text-center d-block">${setName}</span>
-    <span class="text-center d-block">${setHeight}</span>
-    <span class="text-center d-block">${setWeight}</span>
+    <span class="text-center d-block">Name: ${setName}</span>
+    <span class="text-center d-block">Height: ${setHeight}</span>
+    <span class="text-center d-block">Weight: ${setWeight}</span>
     <div>
     <button class="btn btn-info" data-action="previous">previous</button>
     <button class="btn btn-info" data-action="next">next</button>
