@@ -1,3 +1,3 @@
 import { Poke } from "./class/Pokemon.js";
 
-new Poke(1);
+Poke.init(1);

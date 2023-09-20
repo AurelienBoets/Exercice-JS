@@ -1,10 +1,8 @@
 import { Display } from "./Display.js";
 
 export class Poke {
-  constructor(id) {
-    this.init(id);
-  }
-  init(id) {
+  constructor() {}
+  static init(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((response) => {
         if (!response.ok) {

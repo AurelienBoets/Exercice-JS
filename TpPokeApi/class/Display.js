@@ -35,7 +35,7 @@ export class Display {
 
   static next(id) {
     if (id < 1010) {
-      let x = new Poke(++id);
+      let x = Poke.init(++id);
       return x;
     } else {
       return;
@@ -44,7 +44,7 @@ export class Display {
 
   static previous(id) {
     if (id > 1) {
-      let x = new Poke(--id);
+      let x = Poke.init(--id);
       return x;
     } else {
       return;
@@ -52,7 +52,7 @@ export class Display {
   }
 
   static surprise() {
-    let x = new Poke(Math.floor(Math.random() * 1010 + 1));
+    let x = Poke.init(Math.floor(Math.random() * 1010 + 1));
     return x;
   }
 }
