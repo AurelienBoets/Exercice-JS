@@ -27,5 +27,9 @@ list.addEventListener("click", (e) => {
   if (e.target.getAttribute("class") == "bi bi-trash float-end") {
     list.innerHTML = "";
     list.appendChild(productList.delete(listItem.getAttribute("data-id")));
+  } else if (
+    e.target.getAttribute("class") == "bi bi-pencil-square float-end"
+  ) {
+    text.value = productList.edit(listItem.getAttribute("data-id"));
   }
 });
