@@ -17,6 +17,7 @@ export class ProductList {
       let product = new Product(Date.now(), name);
       this.productList.push(product);
       localStorage.setItem("product", JSON.stringify(this.productList));
+      this.isEdit = "";
       return this.render();
     }
   }
