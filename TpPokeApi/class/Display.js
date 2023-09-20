@@ -1,7 +1,6 @@
 import { Poke } from "./Pokemon.js";
 
 export class Display {
-  constructor() {}
   static display(setImg, setName, setHeight, setWeight, id) {
     document.body.innerHTML = "";
     let div = document.createElement("div");

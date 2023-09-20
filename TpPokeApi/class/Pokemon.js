@@ -1,7 +1,6 @@
 import { Display } from "./Display.js";
 
 export class Poke {
-  constructor() {}
   static init(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((response) => {
